@@ -1,6 +1,6 @@
-const http = require("http");
-const fs = require("fs");
-const path = require("path");
+import http from "http";
+import fs from "fs";
+import path from "path";
 
 class Server {
   constructor(port) {
@@ -9,7 +9,7 @@ class Server {
   start() {
     http
       .createServer((req, res) => {
-        fs.readFile(path.join(__dirname, "index.html"), (err, data) => {
+        fs.readFile(path.join(path.resolve(), "index.html"), (err, data) => {
           if (err) {
             res.writeHead(500, { "Content-Type": "text/html" });
             res.write("500");
@@ -20,13 +20,13 @@ class Server {
             res.end();
           }
         });
-        fs.readFile(path.join(__dirname, "react.js"), (err, data) => {
+        fs.readFile(path.join(path.resolve(), "react.js"), (err, data) => {
           if (err) {
             res.writeHead(500, { "Content-Type": "text/html" });
             res.write("500");
             res.end();
           } else {
-            res.writeHead(200, { "Content-Type": "text/javascript" });
+            res.writeHead(200, { "Content-Type": "application/javascript" });
             res.write(data);
             res.end();
           }
