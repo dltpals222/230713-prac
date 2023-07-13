@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #root {
+      width: 100vw;
+      height:100vh;
+      background-color: rgb(214, 214, 214);
+      display: flex;
+      justify-content: center;
+      align-items: center
+    };
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1>나는 신발이 없음을 한탄했는데, </br> 길에서 발이 없는 사람을 만났다.</h1>
+    <button>모드 변경</button>
+  </div>
+  <script>
+    const root = document.getElementById('root');
+    const rootH1 = document.querySelector('h1');
+    const rootButton = document.querySelector('button');
+
+    let count = true;
+    rootButton.addEventListener('click', function(e){
+      if(count){
+        root.style.backgroundColor = 'rgb(0,0,0)';
+        rootH1.style.color = 'rgb(214,214,214)';
+        count = false;
+      } else {
+        root.style.backgroundColor = 'rgb(214,214,214)';
+        rootH1.style.color = 'rgb(0,0,0)';
+        count = true;
+      }
+    })
+  </script>
+</body>
+</html>
