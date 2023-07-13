@@ -12,7 +12,7 @@ class Server {
         fs.readFile(path.join(path.resolve(), "index.html"), (err, data) => {
           if (err) {
             res.writeHead(500, { "Content-Type": "text/html" });
-            res.write("500");
+            res.write("index.html 500");
             res.end();
           } else {
             res.writeHead(200, { "Content-Type": "text/html" });
@@ -20,10 +20,10 @@ class Server {
             res.end();
           }
         });
-        fs.readFile(path.join(path.resolve(), "react.js"), (err, data) => {
+        fs.readFile(path.join(path.resolve(), "react.jsx"), (err, data) => {
           if (err) {
             res.writeHead(500, { "Content-Type": "text/html" });
-            res.write("500");
+            res.write("react.js 500");
             res.end();
           } else {
             res.writeHead(200, { "Content-Type": "application/javascript" });
