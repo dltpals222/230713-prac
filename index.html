@@ -28,15 +28,13 @@
 <body>
   <div id="root">
     <h1>나는 신발이 없음을 한탄했는데, </br> 길에서 발이 없는 사람을 만났다.</h1>
-    <button>모드 변경</button>
   </div>
   <script>
     const root = document.getElementById('root');
     const rootH1 = document.querySelector('h1');
-    const rootButton = document.querySelector('button');
 
     let count = true;
-    rootButton.addEventListener('click', function(e){
+    rootH1.addEventListener('click', function(){
       if(count){
         root.style.backgroundColor = 'rgb(0,0,0)';
         rootH1.style.color = 'rgb(214,214,214)';
