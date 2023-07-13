@@ -20,13 +20,13 @@ class Server {
             res.end();
           }
         });
-        fs.readFile(path.join(path.resolve(), "react.jsx"), (err, data) => {
+        fs.readFile(path.join(path.resolve(), "react.js"), (err, data) => {
           if (err) {
             res.writeHead(500, { "Content-Type": "text/html" });
             res.write("react.js 500");
             res.end();
           } else {
-            res.writeHead(200, { "Content-Type": "application/javascript" });
+            res.writeHead(200, { "Content-Type": "text/javascript" });
             res.write(data);
             res.end();
           }

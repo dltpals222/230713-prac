@@ -20,12 +20,14 @@
   },
   "homepage": "https://github.com/dltpals222/230713-prac#readme",
   "dependencies": {
-    "@babel/core": "^7.22.9",
-    "@babel/preset-env": "^7.22.9",
-    "@babel/preset-react": "^7.22.5",
-    "babel": "^6.23.0",
     "babel-loader": "^9.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5"
   }
 }
